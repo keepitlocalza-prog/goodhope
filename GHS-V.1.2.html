@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Hope Surfboards — Brand Experience</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ghBlack: '#111111',
+            ghOffWhite: '#F2F1EC',
+            ghSlate: '#A5B4C4',
+            ghSeafoam: '#A6DCDA',
+            ghCoral: '#EE8891',
+            ghAtlanticBlue: '#5D80AA',
+            ghYellow: '#ECCF5D'
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    /* Hide scrollbar for chrome, safari and opera */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-stone-50 text-ghBlack font-sans min-h-screen antialiased flex flex-col items-center justify-start p-3 sm:p-8">
+
+  <div class="w-full max-w-7xl bg-white border border-stone-200 rounded-2xl shadow-sm p-4 sm:p-10 my-auto">
+
+    <!-- Header / Branding -->
+    <div class="text-center pb-6 border-b border-stone-200">
+      <h1 class="text-xs uppercase tracking-[0.3em] text-stone-400 font-semibold mb-1.5">Brand Identity System</h1>
+      <p class="text-2xl sm:text-4xl font-extrabold tracking-[0.2em] uppercase text-ghBlack">Good Hope</p>
+      <p class="text-xs sm:text-sm tracking-[0.25em] text-stone-500 uppercase mt-1">Surfboards — Cape Town</p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="flex border-b border-stone-200 overflow-x-auto py-4 mb-8 justify-start sm:justify-center gap-3 sm:gap-8 no-scrollbar">
+      <button onclick="switchTab('logo')" id="btn-logo" class="tab-btn px-4 py-2 text-sm sm:text-base font-semibold border-b-2 border-transparent text-stone-500 hover:text-ghBlack transition-all whitespace-nowrap">Logo</button>
+      <button onclick="switchTab('colors')" id="btn-colors" class="tab-btn px-4 py-2 text-sm sm:text-base font-semibold border-b-2 border-transparent text-stone-500 hover:text-ghBlack transition-all whitespace-nowrap">Colors</button>
+      <button onclick="switchTab('assets')" id="btn-assets" class="tab-btn px-4 py-2 text-sm sm:text-base font-semibold border-b-2 border-transparent text-stone-500 hover:text-ghBlack transition-all whitespace-nowrap">Assets</button>
+      <button onclick="switchTab('vibe')" id="btn-vibe" class="tab-btn active px-4 py-2 text-sm sm:text-base font-semibold border-b-2 border-ghBlack text-ghBlack transition-all whitespace-nowrap">Vibe</button>
+      <button onclick="switchTab('boards')" id="btn-boards" class="tab-btn px-4 py-2 text-sm sm:text-base font-semibold border-b-2 border-transparent text-stone-500 hover:text-ghBlack transition-all whitespace-nowrap">Boards</button>
+    </nav>
+
+    <div id="tab-logo" class="tab-content space-y-6">
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-8 sm:p-16 text-center flex flex-col items-center justify-center min-h-[380px]">
+        <img 
+          src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Logo-Flattened.png" 
+          alt="Good Hope Surfboards Flattened Logo" 
+          class="max-w-md sm:max-w-xl w-full h-auto object-contain mb-6 filter drop-shadow-md cursor-pointer transition-transform duration-300 hover:scale-105"
+          onclick="openLightbox(this.src, 'Primary Flattened Brandmark')"
+        />
+        <p class="text-xs sm:text-sm uppercase tracking-widest text-stone-400 font-medium">Primary Flattened Brandmark (Click to enlarge)</p>
+      </div>
+      <p class="text-xs sm:text-sm italic text-stone-500 text-center pt-2">Cape Town. West Coast. Overberg. Good vibes.</p>
+    </div>
+
+    <div id="tab-colors" class="tab-content space-y-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="h-28 sm:h-36 bg-ghOffWhite border-b border-stone-200"></div>
+          <div class="p-3 text-center">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800">Sand Dune</p>
+            <p class="text-[11px] text-stone-400 font-mono mt-0.5">#F2F1EC</p>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="h-28 sm:h-36 bg-ghSlate"></div>
+          <div class="p-3 text-center">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800">Coastal Fog</p>
+            <p class="text-[11px] text-stone-400 font-mono mt-0.5">#A5B4C4</p>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="h-28 sm:h-36 bg-ghSeafoam"></div>
+          <div class="p-3 text-center">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800">Seafoam</p>
+            <p class="text-[11px] text-stone-400 font-mono mt-0.5">#A6DCDA</p>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="h-28 sm:h-36 bg-ghCoral"></div>
+          <div class="p-3 text-center">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800">Sunset Coral</p>
+            <p class="text-[11px] text-stone-400 font-mono mt-0.5">#EE8891</p>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="h-28 sm:h-36 bg-ghAtlanticBlue"></div>
+          <div class="p-3 text-center">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800">Atlantic Blue</p>
+            <p class="text-[11px] text-stone-400 font-mono mt-0.5">#5D80AA</p>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+          <div class="h-28 sm:h-36 bg-ghYellow"></div>
+          <div class="p-3 text-center">
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800">Cape Sun</p>
+            <p class="text-[11px] text-stone-400 font-mono mt-0.5">#ECCF5D</p>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-xs sm:text-sm italic text-stone-500 text-center pt-2">Full coastal color palette inspired by Cape Town's ocean landscape and sunsets.</p>
+    </div>
+
+    <div id="tab-assets" class="tab-content space-y-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- Sticker: Coral -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-corel.png', 'Sticker Coral')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-36 sm:h-48 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-corel.png" alt="Sticker Coral" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Sticker Coral</p>
+        </div>
+
+        <!-- Sticker: Heat -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-heat.png', 'Sticker Heat')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-36 sm:h-48 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-heat.png" alt="Sticker Heat" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Sticker Heat</p>
+        </div>
+
+        <!-- Sticker: Red White -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-red-white.png', 'Sticker Red & White')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-36 sm:h-48 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-red-white.png" alt="Sticker Red White" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Sticker Red & White</p>
+        </div>
+
+        <!-- Sticker: Sand -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-sand.png', 'Sticker Sand')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-36 sm:h-48 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-sand.png" alt="Sticker Sand" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Sticker Sand</p>
+        </div>
+
+        <!-- Sticker: Yella -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-yella.png', 'Sticker Yellow')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-36 sm:h-48 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-yella.png" alt="Sticker Yellow" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Sticker Yellow</p>
+        </div>
+
+        <!-- Sticker: Yellow/Blue/White -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-yellaue-white.png', 'Sticker Yellow/Blue')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-36 sm:h-48 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Sticker-yellaue-white.png" alt="Sticker Yellow Blue White" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Sticker Yellow/Blue</p>
+        </div>
+
+      </div>
+      <p class="text-xs sm:text-sm italic text-stone-500 text-center pt-2">Click any sticker to open a full-size lightbox preview.</p>
+    </div>
+
+    <div id="tab-vibe" class="tab-content active space-y-8 text-stone-700 leading-relaxed text-base">
+      
+      <!-- Brand Narrative Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-stone-50 border border-stone-200 rounded-2xl">
+          <h3 class="font-bold text-stone-900 uppercase tracking-wider text-xs mb-2">The Good Hope feeling</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">Boards that belong to this coastline — Cape Town's beachbreaks, the Overberg's firing sandbanks, the wild pulls of the West Coast and trips to Mossel Bay.</p>
+        </div>
+        <div class="p-6 bg-stone-50 border border-stone-200 rounded-2xl">
+          <h3 class="font-bold text-stone-900 uppercase tracking-wider text-xs mb-2">The audience</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">Strong grom energy, balanced by experienced surfers looking for refined flow. Core traditional Cape Town surfer vibes with contemporary energy layered on top.</p>
+        </div>
+        <div class="p-6 bg-stone-50 border border-stone-200 rounded-2xl">
+          <h3 class="font-bold text-stone-900 uppercase tracking-wider text-xs mb-2">What we build</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">Style. Barrels. Vibes. Rail surfing. Trimming. Power surfing. Not performance-obsessed — soul-driven. Covering Thrusters, Fish, Mid-Length, and Longboards.</p>
+        </div>
+      </div>
+
+      <!-- MODULE 1: SOUTHERLY FISH -->
+      <div class="w-full bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-sm my-8">
+        
+        <!-- Banner Header Image (Elands Bay) -->
+        <div class="relative w-full h-56 sm:h-80 md:h-96 overflow-hidden">
+          <img 
+            src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/4d0a0dc4b638b4dd4e8a5e2a89c147c9469ba7f7/elands-Header.png" 
+            alt="Elands Bay Waves" 
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <!-- Content Grid Container -->
+        <div class="relative px-6 pb-10 pt-4 sm:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Surfboard Image Column -->
+          <div class="md:col-span-5 flex flex-col items-center -mt-24 sm:-mt-32 md:-mt-36 z-10">
+            <div class="relative w-40 sm:w-52 md:w-full max-w-[210px]">
+              <img 
+                id="fish-display-img"
+                src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/4d0a0dc4b638b4dd4e8a5e2a89c147c9469ba7f7/cream-fish.png" 
+                alt="Southerly Fish Surfboard" 
+                class="w-full h-auto object-contain filter drop-shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openLightbox(this.src, 'Southerly Fish')"
+              />
+            </div>
+
+            <!-- Interactive Color Swatches Row -->
+            <div class="flex items-center gap-3 mt-6">
+              <button onclick="changeBoardColor('fish', 'cream')" class="w-8 h-8 rounded-md bg-[#F2F1EC] border-2 border-stone-400 hover:scale-110 transition-transform shadow-sm" title="Sand / Cream"></button>
+              <button onclick="changeBoardColor('fish', 'yellow')" class="w-8 h-8 rounded-md bg-[#ECCF5D] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Cape Sun Yellow"></button>
+              <button onclick="changeBoardColor('fish', 'coral')" class="w-8 h-8 rounded-md bg-[#EE8891] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Sunset Coral"></button>
+              <button onclick="changeBoardColor('fish', 'blue')" class="w-8 h-8 rounded-md bg-[#5D80AA] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Atlantic Blue"></button>
+            </div>
+            <p class="text-[11px] text-stone-400 uppercase tracking-wider font-semibold mt-2">Click swatch to view colorway</p>
+          </div>
+
+          <!-- Details Column -->
+          <div class="md:col-span-7 space-y-5 pt-2 md:pt-6">
+            
+            <!-- Title -->
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-ghBlack">
+                SOUTHERLY <span class="text-ghCoral">FISH</span>
+              </h2>
+            </div>
+
+            <!-- Outline & Purpose -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Outline & Purpose</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                Classic twin-fin speed merchant with high volume under chest to fly down the line and zip past fat sections.
+              </p>
+            </div>
+
+            <!-- Ideal Wave Type -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Ideal Wave Type</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                1ft–4ft Pointbreak walls fat sections, and fun beach break.
+              </p>
+            </div>
+
+            <!-- Tail & Fin Setup -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Tail & Fin Setup</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                Deep Swallow | Keel / Twin Fin
+              </p>
+            </div>
+
+            <!-- Sizes Setup Dropdown -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1.5">Board Sizes</h3>
+              <div class="relative mt-1 max-w-md">
+                <select id="fish-size-select" onchange="updateFishSpecs()" class="w-full bg-stone-50 border border-stone-200 text-stone-800 text-sm font-semibold rounded-xl p-3 pr-10 focus:ring-2 focus:ring-ghCoral focus:border-stone-300 outline-none cursor-pointer appearance-none transition-all shadow-sm">
+                  <option value="510">5'10" — 35L to 38L</option>
+                  <option value="600" selected>6'0" — 38L to 42L</option>
+                  <option value="602">6'2" — 42L to 45L</option>
+                  <option value="604">6'4" — 45L to 49L</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-stone-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                </div>
+              </div>
+
+              <!-- Selected Size Details Box -->
+              <div id="fish-specs-display" class="mt-2.5 p-3.5 bg-stone-50 border border-stone-200 rounded-xl text-xs sm:text-sm text-stone-700 font-medium leading-relaxed">
+                <span class="font-bold text-stone-900">Width:</span> 21" – 21 1/2" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 5/8" – 2 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 38L – 42L
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 pt-2">
+              <button onclick="openEnquiryModal('Southerly Fish', 'Custom Order')" class="px-5 py-2.5 bg-ghBlack hover:bg-stone-800 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm">
+                Order Enquiry
+              </button>
+              <button onclick="openEnquiryModal('Southerly Fish', 'Wholesale Order')" class="px-5 py-2.5 bg-ghCoral hover:bg-red-400 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm">
+                Wholesale Orders
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MODULE 2: UNCLE MID LENGTH -->
+      <div class="w-full bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-sm my-8">
+        
+        <!-- Banner Header Image (Mossel Bay) -->
+        <div class="relative w-full h-56 sm:h-80 md:h-96 overflow-hidden">
+          <img 
+            src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/705e7be500c6d715c1e27b6acedad984c52ff1e7/mossel-bay-header.png" 
+            alt="Mossel Bay Pointbreak Waves" 
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <!-- Content Grid Container -->
+        <div class="relative px-6 pb-10 pt-4 sm:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Surfboard Image Column -->
+          <div class="md:col-span-5 flex flex-col items-center -mt-24 sm:-mt-32 md:-mt-36 z-10">
+            <div class="relative w-40 sm:w-52 md:w-full max-w-[210px]">
+              <img 
+                id="mid-display-img"
+                src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/main/midlength-cream.png" 
+                alt="Uncle Mid Length Surfboard" 
+                class="w-full h-auto object-contain filter drop-shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openLightbox(this.src, 'Uncle Mid Length')"
+              />
+            </div>
+
+            <!-- Interactive Color Swatches Row -->
+            <div class="flex items-center gap-3 mt-6">
+              <button onclick="changeBoardColor('mid', 'cream')" class="w-8 h-8 rounded-md bg-[#F2F1EC] border-2 border-stone-400 hover:scale-110 transition-transform shadow-sm" title="Sand / Cream"></button>
+              <button onclick="changeBoardColor('mid', 'pink')" class="w-8 h-8 rounded-md bg-[#EE8891] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Sunset Coral / Pink"></button>
+              <button onclick="changeBoardColor('mid', 'yellow')" class="w-8 h-8 rounded-md bg-[#ECCF5D] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Cape Sun Yellow"></button>
+            </div>
+            <p class="text-[11px] text-stone-400 uppercase tracking-wider font-semibold mt-2">Click swatch to view colorway</p>
+          </div>
+
+          <!-- Details Column -->
+          <div class="md:col-span-7 space-y-5 pt-2 md:pt-6">
+            
+            <!-- Title -->
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-ghBlack">
+                UNCLE <span class="text-ghAtlanticBlue">MID LENGTH</span>
+              </h2>
+            </div>
+
+            <!-- Outline & Purpose -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Outline & Purpose</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                Refined 6'10" – 7'8" mid-length combining paddle power with smooth rail transitions for long-distance walls.
+              </p>
+            </div>
+
+            <!-- Ideal Wave Type -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Ideal Wave Type</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                2ft–6ft points, walls, and sweeping west Coastlines.
+              </p>
+            </div>
+
+            <!-- Tail & Fin Setup -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Tail & Fin Setup</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                Rounded Pin | 2+1 Single fin box / Twin
+              </p>
+            </div>
+
+            <!-- Sizes Setup Dropdown -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1.5">Board Sizes</h3>
+              <div class="relative mt-1 max-w-md">
+                <select id="mid-size-select" onchange="updateMidSpecs()" class="w-full bg-stone-50 border border-stone-200 text-stone-800 text-sm font-semibold rounded-xl p-3 pr-10 focus:ring-2 focus:ring-ghAtlanticBlue focus:border-stone-300 outline-none cursor-pointer appearance-none transition-all shadow-sm">
+                  <option value="610">6'10" — 42L</option>
+                  <option value="702" selected>7'2" — 46L</option>
+                  <option value="706">7'6" — 51L</option>
+                  <option value="708">7'8" — 55L</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-stone-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                </div>
+              </div>
+
+              <!-- Selected Size Details Box -->
+              <div id="mid-specs-display" class="mt-2.5 p-3.5 bg-stone-50 border border-stone-200 rounded-xl text-xs sm:text-sm text-stone-700 font-medium leading-relaxed">
+                <span class="font-bold text-stone-900">Width:</span> 21 1/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 46L
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 pt-2">
+              <button onclick="openEnquiryModal('Uncle Mid Length', 'Custom Order')" class="px-5 py-2.5 bg-ghBlack hover:bg-stone-800 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm">
+                Order Enquiry
+              </button>
+              <button onclick="openEnquiryModal('Uncle Mid Length', 'Wholesale Order')" class="px-5 py-2.5 bg-ghAtlanticBlue hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm">
+                Wholesale Orders
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MODULE 3: DRIVEBY LONGBOARD -->
+      <div class="w-full bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-sm my-8">
+        
+        <!-- Banner Header Image (Hang Five) -->
+        <div class="relative w-full h-56 sm:h-80 md:h-96 overflow-hidden">
+          <img 
+            src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/30792cd6b4f4536c7994d81d0bc5a8e595fb6e8a/Hangfive-Header.png" 
+            alt="Hang Five Classic Longboarding Waves" 
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <!-- Content Grid Container -->
+        <div class="relative px-6 pb-10 pt-4 sm:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Surfboard Image Column -->
+          <div class="md:col-span-5 flex flex-col items-center -mt-24 sm:-mt-32 md:-mt-36 z-10">
+            <div class="relative w-40 sm:w-52 md:w-full max-w-[210px]">
+              <img 
+                id="log-display-img"
+                src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/30792cd6b4f4536c7994d81d0bc5a8e595fb6e8a/cream-longboard.png" 
+                alt="DriveBy Longboard" 
+                class="w-full h-auto object-contain filter drop-shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openLightbox(this.src, 'DriveBy Longboard')"
+              />
+            </div>
+
+            <!-- Interactive Color Swatches Row -->
+            <div class="flex items-center gap-3 mt-6">
+              <button onclick="changeBoardColor('log', 'cream')" class="w-8 h-8 rounded-md bg-[#F2F1EC] border-2 border-stone-400 hover:scale-110 transition-transform shadow-sm" title="Sand / Cream"></button>
+              <button onclick="changeBoardColor('log', 'yellow')" class="w-8 h-8 rounded-md bg-[#ECCF5D] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Cape Sun Yellow"></button>
+              <button onclick="changeBoardColor('log', 'coral')" class="w-8 h-8 rounded-md bg-[#EE8891] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Sunset Coral"></button>
+              <button onclick="changeBoardColor('log', 'blue')" class="w-8 h-8 rounded-md bg-[#5D80AA] border-2 border-stone-200 hover:scale-110 transition-transform shadow-sm" title="Atlantic Blue"></button>
+            </div>
+            <p class="text-[11px] text-stone-400 uppercase tracking-wider font-semibold mt-2">Click swatch to view colorway</p>
+          </div>
+
+          <!-- Details Column -->
+          <div class="md:col-span-7 space-y-5 pt-2 md:pt-6">
+            
+            <!-- Title -->
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-ghBlack">
+                DRIVEBY <span class="text-ghYellow">LONGBOARD</span>
+              </h2>
+            </div>
+
+            <!-- Outline & Purpose -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Outline & Purpose</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                Traditional log with wide nose concave and soft roll through the bottom for classic nose-riding.
+              </p>
+            </div>
+
+            <!-- Ideal Wave Type -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Ideal Wave Type</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                1ft–3ft peelers, glassy bays, and classic log waves.
+              </p>
+            </div>
+
+            <!-- Tail & Fin Setup -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1">Tail & Fin Setup</h3>
+              <p class="text-sm sm:text-base text-stone-600 leading-normal font-medium">
+                Square Tail | Single Box
+              </p>
+            </div>
+
+            <!-- Sizes Setup Dropdown -->
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-1.5">Board Sizes</h3>
+              <div class="relative mt-1 max-w-md">
+                <select id="log-size-select" onchange="updateLogSpecs()" class="w-full bg-stone-50 border border-stone-200 text-stone-800 text-sm font-semibold rounded-xl p-3 pr-10 focus:ring-2 focus:ring-ghYellow focus:border-stone-300 outline-none cursor-pointer appearance-none transition-all shadow-sm">
+                  <option value="901">9'1" — 65L</option>
+                  <option value="904" selected>9'4" — 72L</option>
+                  <option value="906">9'6" — 78L</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-stone-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                </div>
+              </div>
+
+              <!-- Selected Size Details Box -->
+              <div id="log-specs-display" class="mt-2.5 p-3.5 bg-stone-50 border border-stone-200 rounded-xl text-xs sm:text-sm text-stone-700 font-medium leading-relaxed">
+                <span class="font-bold text-stone-900">Width:</span> 22 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 3" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 72L
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 pt-2">
+              <button onclick="openEnquiryModal('DriveBy Longboard', 'Custom Order')" class="px-5 py-2.5 bg-ghBlack hover:bg-stone-800 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm">
+                Order Enquiry
+              </button>
+              <button onclick="openEnquiryModal('DriveBy Longboard', 'Wholesale Order')" class="px-5 py-2.5 bg-ghYellow hover:bg-yellow-500 text-ghBlack font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm">
+                Wholesale Orders
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <p class="text-xs sm:text-sm italic text-stone-500 text-center pt-2 border-t border-stone-100">Authentic. Holds the core. Good Hope feels like home.</p>
+    </div>
+
+    <div id="tab-boards" class="tab-content space-y-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+
+        <!-- Fish Cream -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/cream-fish.png', 'Fish — Cream')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/cream-fish.png" alt="Fish Cream" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Fish — Cream</p>
+        </div>
+
+        <!-- Fish Blue -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-blue.png', 'Fish — Atlantic Blue')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-blue.png" alt="Fish Blue" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Fish — Blue</p>
+        </div>
+
+        <!-- Fish Old Red -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-oldred.png', 'Fish — Old Red')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-oldred.png" alt="Fish Old Red" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Fish — Old Red</p>
+        </div>
+
+        <!-- Fish Trim Yellow -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-trim-yella.png', 'Fish — Trim Yellow')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-trim-yella.png" alt="Fish Trim Yellow" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Fish — Trim Yellow</p>
+        </div>
+
+        <!-- Fish Yellow -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-yella.png', 'Fish — Yellow')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-yella.png" alt="Fish Yellow" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Fish — Yellow</p>
+        </div>
+
+        <!-- Midlength Cream -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/main/midlength-cream.png', 'Midlength — Cream')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/main/midlength-cream.png" alt="Midlength Cream" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Midlength — Cream</p>
+        </div>
+
+        <!-- Midlength Trim Pink -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/midlength-trim-pink.png', 'Midlength — Trim Pink')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/midlength-trim-pink.png" alt="Midlength Trim Pink" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Midlength — Trim Pink</p>
+        </div>
+
+        <!-- Midlength Yellow -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/midlength-yalla.png', 'Midlength — Yellow')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/midlength-yalla.png" alt="Midlength Yellow" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Midlength — Yellow</p>
+        </div>
+
+        <!-- Longboard Cream -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/30792cd6b4f4536c7994d81d0bc5a8e595fb6e8a/cream-longboard.png', 'Longboard — Cream')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/30792cd6b4f4536c7994d81d0bc5a8e595fb6e8a/cream-longboard.png" alt="Longboard Cream" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Longboard — Cream</p>
+        </div>
+
+        <!-- Longboard Blue -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-Blue.png', 'Longboard — Blue')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-Blue.png" alt="Longboard Blue" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Longboard — Blue</p>
+        </div>
+
+        <!-- Longboard Coral -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-Coral.png', 'Longboard — Coral')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-Coral.png" alt="Longboard Coral" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Longboard — Coral</p>
+        </div>
+
+        <!-- Longboard Trim Blue -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-trim-blue.png', 'Longboard — Trim Blue')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-trim-blue.png" alt="Longboard Trim Blue" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Longboard — Trim Blue</p>
+        </div>
+
+        <!-- Longboard White -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-white.png', 'Longboard — White')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-white.png" alt="Longboard White" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Longboard — White</p>
+        </div>
+
+        <!-- Longboard Yellow -->
+        <div onclick="openLightbox('https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-yella.png', 'Longboard — Yellow')" class="p-4 sm:p-6 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col items-center justify-between text-center hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-full h-52 sm:h-64 flex items-center justify-center p-2">
+            <img src="https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-yella.png" alt="Longboard Yellow" class="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-800 mt-2">Longboard — Yellow</p>
+        </div>
+
+      </div>
+      <p class="text-xs sm:text-sm italic text-stone-500 text-center pt-2">Click any surfboard to open a high-res lightbox preview.</p>
+    </div>
+
+  </div>
+
+  <!-- ENLARGED 90% LIGHTBOX MODAL POPUP -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-6" onclick="closeLightbox()">
+    <div class="relative bg-white rounded-3xl p-6 sm:p-10 w-[90vw] h-[90vh] flex flex-col items-center justify-between shadow-2xl border border-stone-200 overflow-hidden" onclick="event.stopPropagation()">
+      
+      <!-- Close Button -->
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold flex items-center justify-center text-xl sm:text-2xl transition-colors shadow-sm">
+        &times;
+      </button>
+      
+      <!-- High-Res Image Display Space -->
+      <div class="w-full flex-1 flex items-center justify-center overflow-hidden p-2">
+        <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-full object-contain filter drop-shadow-xl" />
+      </div>
+      
+      <!-- Caption -->
+      <p id="lightbox-caption" class="text-sm sm:text-lg font-bold uppercase tracking-widest text-stone-800 mt-4 shrink-0"></p>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE ORDER ENQUIRY MODAL -->
+  <div id="enquiry-modal" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeEnquiryModal()">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-stone-200 space-y-5 relative" onclick="event.stopPropagation()">
+      
+      <!-- Close button -->
+      <button onclick="closeEnquiryModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 text-2xl font-bold p-1">&times;</button>
+      
+      <div>
+        <h3 id="modal-title" class="text-xl font-extrabold uppercase text-ghBlack">Order Enquiry</h3>
+        <p id="modal-subtitle" class="text-xs uppercase tracking-wider text-stone-400 font-medium mt-0.5">Good Hope Surfboards Cape Town</p>
+      </div>
+
+      <div id="modal-form-container" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Your Name</label>
+          <input type="text" id="enquiry-name" placeholder="e.g. Luke Smith" class="w-full bg-stone-50 border border-stone-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-ghBlack font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Email / Phone</label>
+          <input type="text" id="enquiry-contact" placeholder="luke@example.com or 082 123 4567" class="w-full bg-stone-50 border border-stone-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-ghBlack font-medium">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Custom Notes / Specs</label>
+          <textarea id="enquiry-notes" rows="3" placeholder="Specify fin box preference, tint details, or surf conditions..." class="w-full bg-stone-50 border border-stone-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-ghBlack font-medium"></textarea>
+        </div>
+
+        <button onclick="submitEnquiry()" class="w-full py-3.5 bg-ghBlack hover:bg-stone-800 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md">
+          Submit Request
+        </button>
+      </div>
+
+      <!-- Success Notice (Hidden initially) -->
+      <div id="modal-success" class="hidden text-center py-6 space-y-3">
+        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-xl font-bold">✓</div>
+        <h4 class="text-base font-extrabold uppercase text-stone-900">Enquiry Received!</h4>
+        <p class="text-xs text-stone-600 leading-relaxed max-w-xs mx-auto">Thanks for connecting with Good Hope Surfboards. Our shaping bay will get back to you shortly.</p>
+        <button onclick="closeEnquiryModal()" class="mt-2 px-6 py-2 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-bold uppercase tracking-wider rounded-xl">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tab Controller, Swatch Handler & Lightbox Script -->
+  <script>
+    /* Surfboard Colorway Image Assets Mapping */
+    const boardColorWays = {
+      fish: {
+        cream: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/4d0a0dc4b638b4dd4e8a5e2a89c147c9469ba7f7/cream-fish.png',
+        yellow: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-yella.png',
+        coral: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-oldred.png',
+        blue: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/fish-blue.png'
+      },
+      mid: {
+        cream: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/main/midlength-cream.png',
+        pink: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/midlength-trim-pink.png',
+        yellow: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/midlength-yalla.png'
+      },
+      log: {
+        cream: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/30792cd6b4f4536c7994d81d0bc5a8e595fb6e8a/cream-longboard.png',
+        yellow: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-yella.png',
+        coral: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-Coral.png',
+        blue: 'https://raw.githubusercontent.com/keepitlocalza-prog/goodhope/3ff0602fe64683ee428a862cc0daad7fc3b263df/Longboard-Blue.png'
+      }
+    };
+
+    function changeBoardColor(model, color) {
+      const imgElem = document.getElementById(model + '-display-img');
+      if (imgElem && boardColorWays[model] && boardColorWays[model][color]) {
+        imgElem.src = boardColorWays[model][color];
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-ghBlack', 'text-ghBlack', 'active');
+        btn.classList.add('border-transparent', 'text-stone-500');
+      });
+
+      const targetTab = document.getElementById('tab-' + tabId);
+      if (targetTab) {
+        targetTab.classList.add('active');
+      }
+      
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.remove('border-transparent', 'text-stone-500');
+        activeBtn.classList.add('border-ghBlack', 'text-ghBlack', 'active');
+      }
+    }
+
+    /* Size Dropdown Specs Data & Handlers */
+    const fishSpecs = {
+      '510': '<span class="font-bold text-stone-900">Width:</span> 20 3/4" – 21 1/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 1/2" – 2 5/8" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 35L – 38L',
+      '600': '<span class="font-bold text-stone-900">Width:</span> 21" – 21 1/2" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 5/8" – 2 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 38L – 42L',
+      '602': '<span class="font-bold text-stone-900">Width:</span> 21 1/2" – 21 7/8" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 3/4" – 2 7/8" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 42L – 45L',
+      '604': '<span class="font-bold text-stone-900">Width:</span> 21 3/4" – 22 1/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 7/8" – 3" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 45L – 49L'
+    };
+
+    const midSpecs = {
+      '610': '<span class="font-bold text-stone-900">Width:</span> 21" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 5/8" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 42L',
+      '702': '<span class="font-bold text-stone-900">Width:</span> 21 1/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 46L',
+      '706': '<span class="font-bold text-stone-900">Width:</span> 21 1/2" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 7/8" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 51L',
+      '708': '<span class="font-bold text-stone-900">Width:</span> 21 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 3" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 55L'
+    };
+
+    const logSpecs = {
+      '901': '<span class="font-bold text-stone-900">Width:</span> 22 1/2" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 2 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 65L',
+      '904': '<span class="font-bold text-stone-900">Width:</span> 22 3/4" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 3" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 72L',
+      '906': '<span class="font-bold text-stone-900">Width:</span> 23" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Thickness:</span> 3 1/8" &nbsp;|&nbsp; <span class="font-bold text-stone-900">Volume:</span> 78L'
+    };
+
+    function updateFishSpecs() {
+      const select = document.getElementById('fish-size-select');
+      if (select) {
+        document.getElementById('fish-specs-display').innerHTML = fishSpecs[select.value];
+      }
+    }
+
+    function updateMidSpecs() {
+      const select = document.getElementById('mid-size-select');
+      if (select) {
+        document.getElementById('mid-specs-display').innerHTML = midSpecs[select.value];
+      }
+    }
+
+    function updateLogSpecs() {
+      const select = document.getElementById('log-size-select');
+      if (select) {
+        document.getElementById('log-specs-display').innerHTML = logSpecs[select.value];
+      }
+    }
+
+    function openLightbox(imgSrc, title) {
+      document.getElementById('lightbox-img').src = imgSrc;
+      document.getElementById('lightbox-caption').innerText = title;
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    /* Modal Handlers */
+    function openEnquiryModal(boardModel, type) {
+      document.getElementById('modal-title').innerText = type + ' — ' + boardModel;
+      document.getElementById('modal-form-container').classList.remove('hidden');
+      document.getElementById('modal-success').classList.add('hidden');
+      document.getElementById('enquiry-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEnquiryModal() {
+      document.getElementById('enquiry-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function submitEnquiry() {
+      document.getElementById('modal-form-container').classList.add('hidden');
+      document.getElementById('modal-success').classList.remove('hidden');
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+        closeEnquiryModal();
+      }
+    });
+  </script>
+</body>
+</html>
